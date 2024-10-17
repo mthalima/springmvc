@@ -13,4 +13,8 @@ public class HelloWorldController {
     }
 
     //processar o form
+    @RequestMapping("/processForm")
+    public String processForm(){
+        return "helloworld";
+    }
 }
