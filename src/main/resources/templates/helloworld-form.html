@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
-    <title>Titulo</title>
+    <title>Teste de formulario</title>
 </head>
-
 <body>
-
-
+    <form th:action="@{/processForm}" method="GET">
+        <input type="text" name="personName" placeholder="Nome" />
+        <input type="submit" />
+    </form>
 </body>
 
 </html>

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HelloWorldController {
 
     //metodo para mostrar o form HTML
-    @RequestMapping
+    @RequestMapping("/showForm")
     public String showForm(){
         return "helloworld-form";
     }
