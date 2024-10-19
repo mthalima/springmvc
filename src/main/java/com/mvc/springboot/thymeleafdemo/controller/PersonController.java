@@ -24,6 +24,10 @@ public class PersonController {
 
     @PostMapping("processPersonForm")
     public String processPersonForm(@ModelAttribute("person") Person pessoa){
+
+        //log the input data
+        System.out.printf("Pessoa: " + pessoa.getFirstName() + " " + pessoa.getLastName());
+
         return "person-confirmation";
     }
 }
