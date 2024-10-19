@@ -4,6 +4,8 @@ import com.mvc.springboot.thymeleafdemo.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class PersonController {
@@ -18,5 +20,10 @@ public class PersonController {
         theModel.addAttribute("person", pessoa);
 
         return "person-form";
+    }
+
+    @PostMapping("processPersonForm")
+    public String processPersonForm(@ModelAttribute("person") Person pessoa){
+        return "person-confirmation";
     }
 }
