@@ -11,9 +11,25 @@
 <form th:action="@{/processPersonForm}" th:object="${person}" method="POST">
 
     Nome: <input type="text" th:field="*{firstName}" />
+
     <br><br>
 
     Sobrenome: <input type="text" th:field="*{lastName}" />
+
+    <br><br>
+
+    País:
+
+
+        <select th:field="*{country}">
+            <option th:value="Brasil">Brasil</option>
+            <option th:value="Brasil">Paraguai</option>
+            <option th:value="Brasil">Portugal</option>
+            <option th:value="Brasil">Canada</option>
+            <option th:value="Brasil">Alemanha</option>
+        </select>
+
+
     <br><br>
 
     <input type="submit" value="Submit" />
