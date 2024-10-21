@@ -28,6 +28,6 @@ public class PersonController {
         //log the input data
         System.out.printf("Pessoa: " + pessoa.getFirstName() + " " + pessoa.getLastName());
 
-        return "person-confirmation";
+        return "person-form";
     }
 }
