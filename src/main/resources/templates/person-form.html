@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title> Cadastro do sistema </title>
+    <title>Teste de formulario</title>
 </head>
-
 <body>
-<h3>Formulário de cadastro</h3>
-
-<form th:action="@{/processPersonForm}" th:object="${person}" method="POST">
-
-    Nome: <input type="text" th:field="*{firstName}" />
-
-    <br><br>
-
-    Sobrenome: <input type="text" th:field="*{lastName}" />
-
-    <br><br>
-
-    País:
-
-
-        <select th:field="*{country}">
-            <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}"></option>
-        </select>
-
-
-    <br><br>
-
-    <input type="submit" value="Submit" />
-
+<form th:action="@{/processFormV3}" method="GET">
+    <input type="text" name="personName" placeholder="Nome" />
+    <input type="submit" />
 </form>
-
 </body>
 
 </html>
