@@ -8,6 +8,16 @@
 <body>
 Add Produto:
 
+
+<h2> Nome do produto: </h2>
+
+<form th:action="@{/addProduct}" th:object="${product}" method="POST">
+
+
+     <input type="text" th:field="*{nomeProduto}" />
+
+    <br><br>
+
 </body>
 
 </html>

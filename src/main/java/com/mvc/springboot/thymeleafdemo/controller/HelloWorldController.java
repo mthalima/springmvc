@@ -23,23 +23,6 @@ public class HelloWorldController {
         return "helloworld";
     }
 
-    @RequestMapping("/processFormV2")
-    public String minParaMaiu(HttpServletRequest request, Model model){
-        //le o parametro requisitado da form
-        String theName = request.getParameter("personName");
-
-        //realiza alguma coisa
-        theName = theName.toUpperCase();
-
-        //cria uma msg
-        String result = "Yo! " + theName;
-
-        //add para o modelo
-        model.addAttribute("message", result);
-
-        return "helloworld";
-    }
-
     @GetMapping("/processFormV3")
     public String processFormVersion3(@RequestParam("personName") String theName, Model model){
 
