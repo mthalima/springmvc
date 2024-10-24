@@ -1,27 +1,33 @@
 package com.mvc.springboot.thymeleafdemo.model;
 
+import jakarta.persistence.*;
+
 import java.util.List;
 import java.util.UUID;
 
+@Entity
 public class User {
 
-        private UUID id;
-        private String name;
-        private String email;
-        private String username;
-        private String password;
-        private boolean isActive;
-        private String role;
-        private List<Habit> habitList;
-        private String authProvider;
+    @Id
+    @GeneratedValue
+    private UUID userId;
 
-    public String getAuthProvider() {
-        return authProvider;
-    }
+    private String userName;
 
-    public void setAuthProvider(String authProvider) {
-        this.authProvider = authProvider;
-    }
+    @Column(unique = true)
+    private String email;
+
+    @Column(unique = true)
+    private String userLogin;
+
+    private String password;
+
+    private boolean enabled;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Habit> habits;
+
+    // Getters and Setters
 
     public String getEmail() {
         return email;
@@ -31,36 +37,20 @@ public class User {
         this.email = email;
     }
 
-    public List<Habit> getHabitList() {
-        return habitList;
+    public boolean isEnabled() {
+        return enabled;
     }
 
-    public void setHabitList(List<Habit> habitList) {
-        this.habitList = habitList;
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
-    public UUID getId() {
-        return id;
+    public List<Habit> getHabits() {
+        return habits;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean active) {
-        isActive = active;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setHabits(List<Habit> habits) {
+        this.habits = habits;
     }
 
     public String getPassword() {
@@ -71,19 +61,27 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public UUID getUserId() {
+        return userId;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setUserId(UUID userId) {
+        this.userId = userId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserLogin() {
+        return userLogin;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserLogin(String userLogin) {
+        this.userLogin = userLogin;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
