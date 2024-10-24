@@ -1,6 +1,6 @@
 package com.mvc.springboot.thymeleafdemo.repository;
 
-import com.mvc.springboot.thymeleafdemo.model.Habit;
+import com.mvc.springboot.thymeleafdemo.entity.Habit;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

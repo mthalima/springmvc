@@ -1,4 +1,4 @@
-package com.mvc.springboot.thymeleafdemo.model;
+package com.mvc.springboot.thymeleafdemo.entity;
 
 
 import jakarta.persistence.*;

@@ -9,7 +9,6 @@ public class HabitDTO {
     private String name;
     private String description;
     private LocalDate startDate;
-    private String frequency;
 
     // Getters e Setters
 
@@ -21,13 +20,6 @@ public class HabitDTO {
         this.description = description;
     }
 
-    public String getFrequency() {
-        return frequency;
-    }
-
-    public void setFrequency(String frequency) {
-        this.frequency = frequency;
-    }
 
     public UUID getId() {
         return id;

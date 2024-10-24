@@ -1,6 +1,6 @@
 package com.mvc.springboot.thymeleafdemo.repository;
 
-import com.mvc.springboot.thymeleafdemo.model.User;
+import com.mvc.springboot.thymeleafdemo.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
