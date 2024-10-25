@@ -28,10 +28,8 @@ public class HabitService {
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         Habit habit = new Habit();
-        habit.setName(habitDTO.getName());
-        habit.setDescription(habitDTO.getDescription());
-        habit.setStartDate(habitDTO.getStartDate());
-        habit.setFrequency(Habit.Frequency.valueOf(habitDTO.getFrequency().toUpperCase()));
+        habit.setHabitName(habitDTO.getName());
+        habit.setHabitDescription(habitDTO.getDescription());
         habit.setUser(user);
 
         habitRepository.save(habit);
